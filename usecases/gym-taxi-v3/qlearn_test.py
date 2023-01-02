@@ -8,13 +8,13 @@ from pathlib import Path
 
 direct = Path().absolute()
 curr_path = direct.__str__().split('\\')[-1]
-PATH_MODEL = '../../'+curr_path
+PATH_MODEL = '../../artifacts/'+curr_path+'/'
 
 env = gym.make("Taxi-v3",render_mode = 'ansi').env
 env.s = 328
 
 # get qlearn
-q_table = np.load(PATH_MODEL+'cab_qlearn_v3.npy') 
+q_table = np.load(PATH_MODEL+'qlearn_v3.npy') 
 
 # Hyperparameters
 alpha = 0.1
