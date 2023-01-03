@@ -29,4 +29,5 @@ pip install cmake 'gym[atari]'
 * Source taxi [here](https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/)
 * Source cartpole [here](https://medium.com/swlh/using-q-learning-for-openais-cartpole-v1-4a216ef237df)
 * cartpole documentation [here](https://www.gymlibrary.dev/environments/classic_control/cart_pole/)
+* mountain car docs [here](https://www.gymlibrary.dev/environments/classic_control/mountain_car/)
 

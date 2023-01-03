@@ -11,14 +11,14 @@ from rltools import get_discrete_state
 direct = Path().absolute()
 curr_path = direct.__str__().split('\\')[-1]
 PATH_MODEL = '../../artifacts/'+curr_path+'/'
-VERSION = 'v0'
+VERSION = 'v1'
 
 env = gym.make("MountainCar-v0",render_mode = 'rgb_array').env
 # env = gym.make("MountainCar-v0",render_mode = 'human').env
 
 # Hyperparameters
-alpha = 0.2 ## Learning Rate
-gamma = 0.95
+alpha = 0.25 ## Learning Rate
+gamma = 0.9
 epsilon = 0.95
 
 Observation = [75, 55]
@@ -71,7 +71,7 @@ for i in range(1, 50000):
     err = ((q_table-q_table_old).mean())*1000
     total_reward += episode_reward 
 
-    checkp = 50
+    checkp = 100
     if i % checkp == 0: 
         print('-'*10)
         print('EPISODE : ', i)
